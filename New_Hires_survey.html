@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ESI New Hires Survey</title>
+	<script
+			src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"></script>
+
+	<script>
+		function SubForm ()
+		{
+			$.ajax({
+			    url: 'https://api.apispreadsheets.com/data/XJJ6i9Ge0GicDuvU/',
+				type:'post',
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Submitted Successfully :(")
+					window.location.reload("New_Hire_Survey.html");
+				},
+				error: function(){
+				alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+	
+	<style>
+		body {
+			
+			font-family: Verdana;
+			text-align: left;
+			background-image: url('https://3dprintingindustry.com/wp-content/uploads/2019/07/bosch_parkhaus_img_w1280.jpg');
+  			background-attachment: fixed;
+  			background-size: cover;
+			font-size: larger;
+		}
+		img.sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			width: 400px;
+			height: 100px;
+		  }
+		h1 {
+			font-size: 30px;
+			background-color: rgb(238, 207, 122);
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 5px 10px;
+			box-shadow: 2px 5px 10px rgb(0,0,0,0.5);
+			text-align: center;
+		}
+		h4{
+			padding: 5px 10px;
+			box-shadow: 2px 5px 10px rgb(0,0,0,0.5);
+			background-color: rgb(233, 210, 108);
+            color:navy;
+		}
+		fieldset {  
+			border: #00cc00 2px solid;  
+			padding: 10px;  
+			color: green;  
+		}
+		.formData {
+			padding-top: 1px;
+			padding-bottom: 20px;
+			padding-left: 10px;
+			width: 100%;
+		}
+		form {
+			font-size: 20px;
+			background-color: transparent;
+            color:springgreen;
+			max-width: 800px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+		form input {
+			margin-left: 10px;
+			font-size: 15px;
+		}
+		.form-control {
+				text-align: left;
+				margin-bottom: 25px;
+			}
+		
+			
+			.form-control label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.form-control input,
+			.form-control select,
+			.form-control textarea {
+				border: 1px solid #777;
+				border-radius: 2px;
+				font-family: inherit;
+				padding: 10px;
+				display: block;
+				width: 95%;
+			}
+		
+			.form-control input[type="radio"],
+			.form-control input[type="checkbox"] {
+				display: inline-block;
+				width: auto;
+			}		
+	</style>
+
+	
+</head>
+
+<body>
+
+	
+	<!--<img class="sticky" src="https://th.bing.com/th/id/OIP.v3cOi_9E3AWhs4Xm6htssgGQBD?pid=ImgDet&rs=1" alt="Avatar">-->
+	<h1>ESI New Hires Survey	</h1>
+
+    <form id="myForm">
+        <div class="formData">
+
+
+
+            <div class="form-control">
+                NTID:
+                <input type="text" id="id" name="id" required placeholder="Enter your NTID" />
+            </div>
+
+            <div class="form-control">
+                Employee Name:
+                <input type="text"
+                       id="name"
+                       name="name"
+                       required
+                       placeholder="Enter your Name" />
+            </div>
+
+            <div class="form-control">
+                Day of Training:
+                <input type="text"
+                       id="day"
+                       name="day"
+                       required
+                       placeholder="Enter the Day of Training " />
+            </div>
+
+            <h4>Rate the Training Logistics based on the follwing Parameters:</h4>
+            <div class="form-control">
+                Work stations Functioning:
+                <select name="Work stations" id="recommed-1" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Network and Tool Login Provided:
+                <select name="Network and Tool Login Provided" id="recommed-3" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Workbooks/Study Materials Provided:
+                <select name="Workbooks/Study Materials Provided:" id="recommed-4" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Daily Agenda Shared:
+                <select name="Daily Agenda Shared" id="recommed-5" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Training Schedule Shared:
+                <select name="Training Schedule Shared" id="recommed-6" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Training Room/Meeting Room clean and Tidy:
+                <select name="Training Room clean and Tidy" id="recommed-7" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <h4>Rate your Trainer's Training Delivery Skills based on the following parameters:</h4>
+            <div class="form-control">
+                Excellent command over English:
+                <select name="Excellent command over English" id="recommed-8" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Confident:
+                <select name="Confident" id="recommed-9" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Responsive and Approachable:
+                <select name="Responsive and Approachable" id="recommed-10" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Where all the questions dealt with equal priority:
+                <select name="Treats with Priority" id="recommed-11" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Knowledgeable:
+                <select name="Knowledgeable" id="recommed-12" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Motivates and Inspires:
+                <select name="Motivates and Inspires" id="recommed-13" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <h4>Rate the Training content based on the following parameters:</h4>
+            <div class="form-control">
+                Clear and Easy to Understand:
+                <select name="Clear and Easy to Understand" id="recommed-14" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                All necessary Topics Covered:
+                <select name="All necessary Topics Covered" id="recommed-15" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Useful and Relevant:
+                <select name="Useful and Relevant" id="recommed-16" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Enough Time Provided:
+                <select name="Enough Time Provided" id="recommed-17" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <h4>Overall:</h4>
+            <div class="form-control">
+                I will recommend this class to my peers:
+                <select name="recommed17" id="recommed-18" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">NA</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                Any Comments:
+                <input type="text" id="comments" name="comments" placeholder="Enter your valuable comments" />
+            </div>
+        </div>
+    </form>
+	
+	
+	<h1>
+		<button class="button" onClick="SubForm()" >submit</button>
+	</h1>
+</body>
+</html>
