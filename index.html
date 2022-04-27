@@ -8,16 +8,44 @@
 			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 			crossorigin="anonymous"></script>
 
+    <script>
+
+    function checkIfOther(){
+
+        a = document.getElementById("recommed-8");
+
+        if(a.value == "no" || a.value=="na")
+
+            document.getElementById("no").setAttribute("style", "display:inline");
+
+        }
+
+    </script>
+
+    <script>
+
+    function checkOther(){
+
+        a = document.getElementById("recommed-9");
+
+        if(a.value == "no" || a.value=="yes")
+
+            document.getElementById("na").setAttribute("style", "display:inline");
+
+        }
+
+    </script>
+
 	<script>
 		function SubForm ()
 		{
 			$.ajax({
-			    url: 'https://api.apispreadsheets.com/data/XJJ6i9Ge0GicDuvU/',
+			    url: 'https://api.apispreadsheets.com/data/CACwUtWua8hy9Gur/',
 				type:'post',
 				data:$("#myForm").serializeArray(),
 				success: function(){
 					alert("Form Submitted Successfully :(")
-					window.location.reload("index.html");
+					window.location.reload("New_Hire_Survey.html");
 				},
 				error: function(){
 				alert("There was an error :(")
@@ -118,8 +146,8 @@
 	
 	<!--<img class="sticky" src="https://th.bing.com/th/id/OIP.v3cOi_9E3AWhs4Xm6htssgGQBD?pid=ImgDet&rs=1" alt="Avatar">-->
 	<h1>ESI New Hires Survey	</h1>
-
-    <form id="myForm">
+    
+    <form id="myForm"  action="input"  method="get">
         <div class="formData">
 
 
@@ -139,7 +167,7 @@
             </div>
 
             <div class="form-control">
-                Day of Training:
+                Day of Training & Category:
                 <input type="text"
                        id="day"
                        name="day"
@@ -211,7 +239,7 @@
             <h4>Rate your Trainer's Training Delivery Skills based on the following parameters:</h4>
             <div class="form-control">
                 Excellent command over English:
-                <select name="Excellent command over English" id="recommed-8" required>
+                <select name="Excellent command over English" onchange="checkIfOther();" id="recommed-8" required>
                     <option value="" disabled selected hidden></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -219,15 +247,34 @@
                 </select>
             </div>
 
+
+            <div id="no"  style="display:none">
+
+                <label>Please specify the topic name:</label><input type="text" name="topic name" id="otherText" />
+                
+            </div>
+
+            <br />
+            <br />
+
             <div class="form-control">
-                Confident:
-                <select name="Confident" id="recommed-9" required>
+                Tech Connect happened on a daily basis:
+                <select name="Tech Connect" onchange="checkOther();" id="recommed-9" required>
                     <option value="" disabled selected hidden></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                     <option value="na">NA</option>
                 </select>
             </div>
+
+            <div id="na"  style="display:none">
+
+                <label>Tech Name:</label><input type="text" name="Tech Name" id="otherText" />
+
+            </div>
+
+            <br />
+            <br />
 
             <div class="form-control">
                 Responsive and Approachable:
@@ -250,8 +297,8 @@
             </div>
 
             <div class="form-control">
-                Knowledgeable:
-                <select name="Knowledgeable" id="recommed-12" required>
+                Where all your questions are answered on same day:
+                <select name="answered on same day" id="recommed-12" required>
                     <option value="" disabled selected hidden></option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -334,3 +381,4 @@
 	</h1>
 </body>
 </html>
+
