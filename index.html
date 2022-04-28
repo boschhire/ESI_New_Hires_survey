@@ -14,7 +14,7 @@
 
         a = document.getElementById("recommed-8");
 
-        if(a.value == "no" || a.value=="na")
+        if (a.value == "na")
 
             document.getElementById("no").setAttribute("style", "display:inline");
 
@@ -28,7 +28,7 @@
 
         a = document.getElementById("recommed-9");
 
-        if(a.value=="yes")
+        if (a.value == "5" || a.value == "4" || a.value == "3" || a.value == "2" || a.value == "1")
 
             document.getElementById("na").setAttribute("style", "display:inline");
 
@@ -40,7 +40,7 @@
 		function SubForm ()
 		{
 			$.ajax({
-			    url: 'https://api.apispreadsheets.com/data/CACwUtWua8hy9Gur/',
+			    url: 'https://api.apispreadsheets.com/data/NjNzYlZqHgsfxpPC/',
 				type:'post',
 				data:$("#myForm").serializeArray(),
 				success: function(){
@@ -180,9 +180,13 @@
                 Work stations Functioning:
                 <select name="Work stations" id="recommed-1" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
+                    
                 </select>
             </div>
 
@@ -190,8 +194,11 @@
                 Network and Tool Login Provided:
                 <select name="Network and Tool Login Provided" id="recommed-3" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -200,8 +207,11 @@
                 Workbooks/Study Materials Provided:
                 <select name="Workbooks/Study Materials Provided:" id="recommed-4" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>.
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -210,8 +220,11 @@
                 Daily Agenda Shared:
                 <select name="Daily Agenda Shared" id="recommed-5" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -220,8 +233,11 @@
                 Training Schedule Shared:
                 <select name="Training Schedule Shared" id="recommed-6" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -230,8 +246,11 @@
                 Training Room/Meeting Room clean and Tidy:
                 <select name="Training Room clean and Tidy" id="recommed-7" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -241,8 +260,11 @@
                 Excellent command over English:
                 <select name="Excellent command over English" onchange="checkIfOther();" id="recommed-8" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -261,8 +283,11 @@
                 Tech Connect happened on a daily basis:
                 <select name="Tech Connect" onchange="checkOther();" id="recommed-9" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -280,8 +305,11 @@
                 Responsive and Approachable:
                 <select name="Responsive and Approachable" id="recommed-10" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -290,8 +318,11 @@
                 Where all the questions dealt with equal priority:
                 <select name="Treats with Priority" id="recommed-11" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -300,8 +331,11 @@
                 Where all your questions are answered on same day:
                 <select name="answered on same day" id="recommed-12" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -310,8 +344,11 @@
                 Motivates and Inspires:
                 <select name="Motivates and Inspires" id="recommed-13" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -321,8 +358,11 @@
                 Clear and Easy to Understand:
                 <select name="Clear and Easy to Understand" id="recommed-14" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -331,8 +371,11 @@
                 All necessary Topics Covered:
                 <select name="All necessary Topics Covered" id="recommed-15" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -341,8 +384,11 @@
                 Useful and Relevant:
                 <select name="Useful and Relevant" id="recommed-16" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -351,8 +397,11 @@
                 Enough Time Provided:
                 <select name="Enough Time Provided" id="recommed-17" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
@@ -362,8 +411,11 @@
                 I will recommend this class to my peers:
                 <select name="recommed17" id="recommed-18" required>
                     <option value="" disabled selected hidden></option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                     <option value="na">NA</option>
                 </select>
             </div>
